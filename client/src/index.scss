@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuItalic';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuBold';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuMedium';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuMediumItalic';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuBoldItalic';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuLight';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-Light.ttf');
+}
+
+@font-face {
+  font-family: 'UbuntuLightItalic';
+  src: url('./assets/fonts/Ubuntu/Ubuntu-LightItalic.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px !important;
+  line-height: 1.5rem;
+  font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+}
