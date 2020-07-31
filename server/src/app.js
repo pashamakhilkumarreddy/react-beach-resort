@@ -16,7 +16,38 @@ const {
 } = require('./models');
 const app = express();
 
-app.use(express.json())
+app.use(require('express-status-monitor')({
+  title: 'Server Status',
+  path: '/status',
+  spans: [{
+    interval: 1,
+    retention: 60,
+  },
+  {
+    interval: 5,
+    retention: 60,
+  },
+  {
+    interval: 15,
+    retention: 60,
+  },
+  ],
+  chartVisibility: {
+    cpu: true,
+    mem: true,
+    load: true,
+    responseTime: true,
+    rps: true,
+    statusCodes: true,
+  },
+  healthChecks: [{
+    protocol: 'http',
+    host: 'localhost',
+    path: '/',
+    port: '3000',
+  }],
+}))
+  .use(express.json())
   .use(cors())
   .use(helmet())
   .use(compression())
